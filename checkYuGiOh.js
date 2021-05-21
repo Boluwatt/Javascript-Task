@@ -1,33 +1,35 @@
-function checkYuGiOh (n) {
-    if(typeof n == 'number') {
-        let 
+function checkYuGiOh (N) {
+    if(typeof N == 'number') {
+        const arr = Array.from({length: N}, (_, index) => index + 1);
+        console.log(arr);
+        return arr
     }
 
-    else if (typeof n == 'object') {
-        if (Array.isArray(n)) {
-            console.log('this is an array')
-            return ('${n} is not a valid number but an array')
+    else if (typeof N == 'object') {
+        if (Array.isArray(N)) {
+            console.log('invalid parameter:${N}')
+            return ('this is an invalid parameter:${N}')
         }
         else {
-            console.log('this is an object');
-            output = ('${JSON.stringify(n)} is not a valid number but a ${typeof f}')
+            console.log('invalid parameter:${N}');
+            output = ('${JSON.stringify(N)} this is an invalid parameter:${N}')
             return output
         }
     }
 
-    else if (typeof f == 'string') {
+    else if (typeof N == 'string') {
         console.log('')
-        return ('this is not a valid number but a string')  
+        return ('this is an invalid parameter:${N}')  
 
-        if(isNaN(f)) {
-            console.log('this is not a number')
-            return ('${n} is not a valid number but a ${typeof n}')
+        if(isNaN(N)) {
+            console.log('invalid parameter:${N}')
+            return ('${N} this is an invalid parameter:${N}')
         }
     }
 
-    else if (typeof f == 'boolean') {
-        console.log('invalid parameter:${f}')
-        return ('this is an invalid parameter:${f}')
+    else if (typeof N == 'boolean') {
+        console.log('invalid parameter:${N}')
+        return ('this is an invalid parameter:${N}')
     }
 
     else {
