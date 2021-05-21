@@ -32,6 +32,11 @@ function convertFahrToCelsius (f) {
         }
     }
 
+    else if (typeof f == 'boolean') {
+        console.log('invalid parameter:${f}')
+        return ('this is an invalid parameter:${f}')
+    }
+
     else {
         console.log('failure')
     }
